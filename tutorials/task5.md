@@ -1,19 +1,22 @@
+
+---
+
 ### @flyoutOnly 1
 
+# Fischsammler
 
-# Fish collector
-
-
-## Step 1
+## Schritt 1
 
 ```template
 player.onItemInteracted(BLAZE_ROD, function () {
 })
 ```
 
-In this task, we need to move clownfish and pufferfish from the ship, over onto the pier. First though, lets go collect some fish. Use the ``||agent:agent move forward 2||`` command to position your Agent over a fish collection point. 
-Then use the ``||agent:agent collect CLOWNFISH||`` command to pick up only clownfish for now.   
-Place your code within the ``||player: on item used||`` section, then right click your **blaze rod** when you want to run the code.
+In dieser Aufgabe müssen wir Clownfische und Kugelfische vom Schiff auf den Steg bringen.
+Zuerst aber wollen wir ein paar Fische einsammeln. Verwende den Befehl `||agent:agent move forward 2||`,
+um deinen Agenten über einen Fischsammelpunkt zu bewegen.
+Benutze dann den Befehl `||agent:agent collect CLOWNFISH||`, um zunächst nur Clownfische einzusammeln.
+Füge deinen Code in den Abschnitt `||player: on item used||` ein und klicke dann mit deinem **Blaze Rod**, wenn du den Code ausführen möchtest.
 
 ```blocks
 player.onItemInteracted(BLAZE_ROD, function () {
@@ -21,11 +24,12 @@ agent.move(LEFT, 1)
 agent.move(FORWARD, 2)
 agent.collect(CLOWNFISH)
 })
-
 ```
 
-## Step 2
-With some clownfish now collected, lets also collect clownfish from the rest of the pickup points. Why not try and put your code in a ``||loops:Repeat 3 times loop||`` (or ``||loops:for loop||`` in Python).
+## Schritt 2
+
+Nachdem nun einige Clownfische gesammelt wurden, wollen wir auch Clownfische von den anderen Sammelpunkten holen.
+Warum versuchst du nicht, deinen Code in eine `||loops:Repeat 3 times loop||` (oder `||loops:for loop||` in Python) zu setzen?
 
 ```blocks
 player.onItemInteracted(BLAZE_ROD, function () {
@@ -35,21 +39,27 @@ for (let index = 0; index < 3; index++) {
     agent.collect(CLOWNFISH)
 }
 })
-
 ```
 
-## Step 3
-With all your clownfish now collected, next write a program to take your Agent over to the correct drop off point on the pier and use the ``||agent:agent drop all down||`` command to drop all the fish into the bucket.
+## Schritt 3
+
+Da du nun alle Clownfische gesammelt hast, schreibe als Nächstes ein Programm, das deinen Agenten
+zum richtigen Abgabeort auf dem Steg bringt, und verwende den Befehl `||agent:agent drop all down||`,
+um alle Fische in den Eimer zu werfen.
 
 ```ghost
 agent.dropAll(FORWARD)
 ```
 
-## Step 4
-Try putting all this within a ``||loops:Repeat times loop||`` to keep picking up fish and droping them off.
+## Schritt 4
 
-## Step 5
-Finally, replicate the same process to handle pufferfish. It is recommended to do this separately.
+Versuche, das Ganze in eine `||loops:Repeat times loop||` zu setzen,
+damit dein Agent Fische wiederholt sammelt und abliefert.
+
+## Schritt 5
+
+Zum Schluss: Wiederhole denselben Vorgang für Kugelfische.
+Es wird empfohlen, dies separat durchzuführen.
 
 ```package
 seymour=github:gbaman/minecraft-ee-seymour-island
