@@ -1,31 +1,31 @@
+
+---
+
 ### @flyoutOnly 1
 
+# Automatischer Bergbau – Stufe 3
 
-# Auto Miner level 3
-
-
-## Step 1
+## Schritt 1
 
 ```template
 player.onItemInteracted(BLAZE_ROD, function () {
 })
 ```
 
-In this task, you must use your agent to mine **only** the ores!   
-You need to be careful, if you mine out the other stone around it, there is a chance the mine might collapse...   
+In dieser Aufgabe musst du deinen Agenten verwenden, um **nur** die Erze abzubauen!
+Du musst vorsichtig sein – wenn du die umliegenden Steine abbaust, könnte die Mine einstürzen...
 
-This task is an **advanced** task, it is highly recommended you have completed Auto Miner 1 and 2 first!
+Diese Aufgabe ist eine **fortgeschrittene** Aufgabe – es wird dringend empfohlen, dass du zuerst Autominer 1 und 2 abgeschlossen hast!
 
-WARNING - This task includes a 50 second timer, that resets your agent back to the start after 50 seconds.      
+WARNUNG – Diese Aufgabe enthält einen 50-Sekunden-Timer, der deinen Agenten nach 50 Sekunden zum Start zurücksetzt.
 
-## Step 2
+## Schritt 2
 
-In this task, there are a few different ways to check each of the ore blocks.   
-One option is though is a collection of ``||logic: or ||`` commands nested within each other. 
-Alternatively, instead of telling the agent which blocks it **should** mine, we could use ``||logic: not ||`` to tell it which blocks not to mine.       
+In dieser Aufgabe gibt es verschiedene Möglichkeiten, die Erzblöcke zu überprüfen.
+Eine Möglichkeit ist die Verwendung einer Sammlung von `||logic: or ||`-Befehlen, die ineinander verschachtelt sind.
+Alternativ dazu könnten wir dem Agenten anstelle der Blöcke, die er **abbauen soll**, mithilfe von `||logic: not ||` sagen, welche Blöcke er **nicht** abbauen soll.
 
-Beyond this, the rest of the task is up to you. The final program will be similar to Autominer 2.   
-
+Abgesehen davon liegt der Rest der Aufgabe bei dir. Das endgültige Programm wird dem aus Autominer 2 ähnlich sein.
 
 ```ghost
 let bob = 0
@@ -45,7 +45,6 @@ bob = 2
         agent.move(FORWARD, 1)
     }
 })
-
 ```
 
 ```package
