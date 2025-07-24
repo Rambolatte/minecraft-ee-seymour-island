@@ -1,20 +1,20 @@
+
+---
+
 ### @flyoutOnly 1
 
+# Automatischer Bergbau – Stufe 1
 
-# Auto Miner level 1
-
-
-## Step 1
+## Schritt 1
 
 ```template
 player.onItemInteracted(BLAZE_ROD, function () {
 })
 ```
 
-Let's use the agent to dig a mine shaft ahead. First, why not try breaking
-the block ahead of the Agent, using ``||agent:agent destroy forward||``.
-Place your code within the ``||player: on item used||`` section, then right click
-your **blaze rod** when you want to run the code.
+Lass uns den Agenten verwenden, um einen Minenschacht nach vorne zu graben.
+Versuche zunächst, den Block vor dem Agenten mit `||agent:agent destroy forward||` zu zerstören.
+Füge deinen Code in den Abschnitt `||player: on item used||` ein und klicke dann mit deinem **Blaze Rod**, wenn du den Code ausführen möchtest.
 
 ```blocks
 player.onItemInteracted(BLAZE_ROD, function () {
@@ -22,10 +22,11 @@ agent.destroy(FORWARD)
 })
 ```
 
-## Step 2
-Lets now combine that with an ``||agent:agent move up||`` command, followed by another
-``||agent:agent destroy forward||``.
-Can you try getting your Agent to break the first column of 3 stone blocks?
+## Schritt 2
+
+Kombiniere das nun mit einem `||agent:agent move up||`-Befehl, gefolgt von einem weiteren
+`||agent:agent destroy forward||`.
+Kannst du deinen Agenten dazu bringen, die erste Spalte aus 3 Steinblöcken zu zerstören?
 
 ```blocks
 player.onItemInteracted(BLAZE_ROD, function () {
@@ -38,15 +39,15 @@ agent.move(UP, 1)
 })
 ```
 
+## Schritt 3
 
-## Step 3
-Surely there is bound to be a better way to do the same action 3 times, instead of just
-putting the same code 3 times?   
-The answer, loops!   
-You can use the ``||loops:Repeat 3 times do||`` (or ``||loops:for||`` in Python) command to repeat the commands contained
-within the command, 3 times.  
-So why not add the ``||agent:agent destroy forward||`` and ``||agent:agent move up||``
-inside a ``||loops:Repeat 3 times do||``?
+Es muss doch sicher eine bessere Möglichkeit geben, die gleiche Aktion 3-mal auszuführen,
+anstatt denselben Code 3-mal zu schreiben?
+Die Lösung: Schleifen!
+Du kannst den Befehl `||loops:Repeat 3 times do||` (oder `||loops:for||` in Python) verwenden, um die enthaltenen Befehle
+3-mal zu wiederholen.
+Warum also nicht `||agent:agent destroy forward||` und `||agent:agent move up||`
+in eine `||loops:Repeat 3 times do||`-Schleife einfügen?
 
 ```blocks
 player.onItemInteracted(BLAZE_ROD, function () {
@@ -57,13 +58,12 @@ for (let index = 0; index < 3; index++) {
 })
 ```
 
+## Schritt 4
 
-
-
-## Step 4
-Finally, using what you have learnt so far, can you use another ``||loops:Repeat 7 times do||`` 
-(or ``||loops:for||`` in Python) to dig out the rest of the mine shaft right up to
-the golden block at the end? Once complete, make sure your Agent finishes on the gold block pressure pad.
+Schließlich – kannst du mit dem, was du bisher gelernt hast, eine weitere `||loops:Repeat 7 times do||`-Schleife
+(oder `||loops:for||` in Python) verwenden, um den restlichen Minenschacht bis zum
+Goldblock am Ende auszugraben? Sobald du fertig bist, stelle sicher, dass dein Agent auf der Druckplatte
+des Goldblocks zum Stehen kommt.
 
 ```package
 seymour=github:gbaman/minecraft-ee-seymour-island
