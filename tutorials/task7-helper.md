@@ -1,22 +1,26 @@
+
+---
+
 ```template
 //
 ```
 
 ### @flyoutOnly 1
+
 ### @hideIteration true
+
 ### @explicitHints 1
 
-# Maze eyes
+# Labyrinth-Augen
 
-## Introduction step @unplugged
+## Einleitungsschritt @unplugged
 
-### In this task, you are the eyes for the coder! As such, your Agent is not used. Close this window and hold the barrier block in your hand to see the maze.  
+### In dieser Aufgabe bist du die Augen für den Coder! Daher wird dein Agent nicht verwendet. Schließe dieses Fenster und halte den Barrier-Block in der Hand, um das Labyrinth zu sehen.
 
-## Step 1
+## Schritt 1
 
-In this task, you are the eyes for the coder! As such, your Agent is not used.    
-Close this window and hold the barrier block in your hand to see the maze.  
-
+In dieser Aufgabe bist du die Augen für den Coder! Daher wird dein Agent nicht verwendet.
+Schließe dieses Fenster und halte den Barrier-Block in der Hand, um das Labyrinth zu sehen.
 
 ```ghost
 loops.onStart()
