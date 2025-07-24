@@ -1,29 +1,32 @@
+
+---
+
 ### @flyoutOnly 1
 
+# Labyrinth-Coder
 
-# Maze coder
-
-
-## Step 1
+## Schritt 1
 
 ```template
 player.onItemInteracted(BLAZE_ROD, function () {
 })
 ```
 
-In this task, you need to get your Agent to the golden pressure pad. Seems easy, right?...   
-The catch... You can't see the obstacles in its way! For that, you will require a friend
-to take the position above, with the added benefit of invisable block visability. They will guide you.    
-When you and your partner are ready, hit Next.   
+In dieser Aufgabe musst du deinen Agenten zur goldenen Druckplatte bringen. Klingt einfach, oder?...
+Der Haken daran: Du kannst die Hindernisse auf dem Weg nicht sehen!
+Dafür brauchst du einen Freund, der sich über dem Labyrinth positioniert –
+mit dem Vorteil, unsichtbare Blöcke sehen zu können. Dieser wird dich führen.
+Wenn du und dein Partner bereit seid, klickt auf „Weiter“.
 
-## Step 2
-To move your agent, you can use the ``||agent:agent move FORWARD||`` command.   
-You are also able to use the ``||agent:agent turn LEFT||`` command if you wish.    
+## Schritt 2
 
-Place your code within the ``||player: on item used||`` section, then right click
-your **blaze rod** when you want to run the code.
-   
-Good luck!
+Um deinen Agenten zu bewegen, kannst du den Befehl `||agent:agent move FORWARD||` verwenden.
+Du kannst auch den Befehl `||agent:agent turn LEFT||` nutzen, wenn du möchtest.
+
+Füge deinen Code in den Abschnitt `||player: on item used||` ein und klicke dann mit deinem
+**Blaze Rod**, wenn du den Code ausführen möchtest.
+
+Viel Glück!
 
 ```blocks
 player.onItemInteracted(BLAZE_ROD, function () {
